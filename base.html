@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 重置样式 */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            /* 去除a标签下划线 */
+            text-decoration: none;
+        }
+
+        /* 设置样式 */
+        .page ul li {
+            display: inline-block;
+        }
+        /* 思路：将a标签设置行内块元素 设置宽高  */
+        .page ul li a {
+            display: inline-block;
+            height: 34px;
+            width: 34px;
+            font-size: 14px;
+            text-align: center;
+            line-height: 34px;
+            border: 1px solid #e1e2e3;
+            margin-right: 5px;
+        }
+        .page .first a ,.page .next a {
+            width: 60px;
+            height: 34px;
+        }
+        /*  鼠标滑过a标签时样式*/
+        .page ul li a:hover {
+            border: solid 1px steelblue;
+            background-color: #f2f3f8;
+        }
+        /* 点击选中时a样式 */
+        .page .active {
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            border:none;
+            font-size: 700;
+            color: #000;
+            cursor: initial;
+        }
+        /* 选中的a的样式设置 去除边框 背景颜色设置为透明 */
+        .page .active:hover {
+            border: none;
+            /* 设置为透明 但是一般不这么用 
+            在开发中 一般用js 去掉href
+             */
+            background-color: transparent;
+
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <ul>
+        <li class="first"><a href="#">&lt;上一页</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a  class="active">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">7</a></li>
+        <li><a href="#">8</a></li>
+        <li><a href="#">9</a></li>
+        <li><a href="#">10</a></li>
+        <li class="next"><a href="#">下一页&gt;</a></li>
+    </ul>
+</div>
+</body>
+</html>
